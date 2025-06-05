@@ -1,0 +1,10 @@
+@import url(../global/varible.css);
+@import url(../global/fonts.css);
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif ;
+  }
+
+  
+  

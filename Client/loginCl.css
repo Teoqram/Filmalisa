@@ -1,0 +1,104 @@
+body {
+  background-color: #1d1d1d;
+  color: #cfcfe2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+h1 {
+  font-family: Numans;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 80px;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.login-container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo {
+  width: 250px;
+  height: 220px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-box {
+  background-color: transparent;
+  border: 1px solid #39404f;
+  border-radius: 8px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-box input {
+  background: none;
+  border: none;
+  color: #cfcfe2;
+  font-size: 14px;
+  outline: none;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.left-icon {
+  color: #999;
+}
+
+.right-icon {
+  cursor: pointer;
+}
+
+button {
+  background-color: #9b51e0;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #8a30d6;
+}
+
+input::placeholder {
+  color: #39404f;
+}
+
+.a-tagi {
+  text-decoration: underline;
+  float: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-style: solid;
+}
+
+.description-login{
+font-weight: 500;
+font-size: 40px;
+line-height: 80px;
+letter-spacing: -2%;
+text-align: center;
+margin-bottom: 20px;
+
+
+
+}
