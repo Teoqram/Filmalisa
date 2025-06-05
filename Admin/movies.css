@@ -1,0 +1,270 @@
+/* Sidebar */
+aside.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+.logo-img {
+  width: 42px;
+  height: 42px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 12px;
+  margin-right: 60px;
+}
+
+.logo a {
+  color: #aeaeae;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0%;
+
+  text-decoration: none;
+}
+
+nav.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  color: #aeaeae;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-left: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s, border-left 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #2a2a2a;
+}
+
+.menu-item.active {
+  background-color: #58209d;
+  color: white;
+  height: 56px;
+}
+
+.menu-item .icon {
+  font-size: 18px;
+  color: #9b59b6;
+}
+
+.logout {
+  padding-left: 20px;
+}
+
+.logout a {
+  color: #9b59b6;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout a:hover {
+  text-decoration: underline;
+}
+
+.logo-text {
+  font-weight: 400;
+  font-size: 20px !important;
+  letter-spacing: 1.5px;
+}
+
+/* sidebar end  */
+/* Main content */
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0f0f0f;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  color: white;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header-left .greeting {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin: 0;
+  font-family: Raleway, sans-serif;
+}
+
+.dashboard-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  margin-top: 5px;
+  font-family: Raleway, sans-serif;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.admin-name {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: Raleway, sans-serif;
+}
+
+/* movies table */
+.custom-table th {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.custom-table td {
+  background-color: white;
+  color: black;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.poster-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: start;
+  margin-left: 30px;
+}
+.tr-th2 {
+  padding-right: 40px !important;
+}
+
+.poster-title img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.custom-table th:first-child {
+  border-top-left-radius: 8px;
+}
+.custom-table th:last-child {
+  border-top-right-radius: 8px;
+}
+.custom-table td:first-child {
+  border-bottom-left-radius: 8px;
+}
+.custom-table td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.action-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-btn {
+  font-family: Raleway, sans-serif;
+  color: white;
+  font-weight: 1000;
+  font-size: 14px;
+  text-align: center;
+  background-color: #9b51e0;
+
+  border-radius: 4px;
+  padding: 2px 30px;
+  margin-right: 20px;
+}
+.create-btn:hover {
+  background-color: #7a3bb0;
+}
+
+/* Custom styles  */
+
+.custom-input {
+  background-color: transparent;
+  border: 1px solid #2e3d59;
+  color: #eee;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.btn-purple {
+  background-color: #9b51e0;
+  color: white;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn-purple:hover {
+  background-color: #7a3bb0;
+}
+
+input::placeholder {
+  color: #2e3d59 !important; /* istədiyin rəng kodunu yaz */
+}
+
+input {
+
+  background-color: #141414 !important; /* istədiyin fon rəngi */
+}
+textarea::placeholder {
+  color: #2e3d59 !important; /* istədiyin rəng kodunu yaz */
+}
+textarea {
+  background-color: #141414 !important; /* istədiyin fon rəngi */
+}
+
+.poster-image {
+  
+  width: 204px;
+  height: 284px;
+  border-radius: 12px;
+}
+form{
+    margin-top: 35px;
+}
+.foto{
+    margin-top: 15px;
+    
+
+}
