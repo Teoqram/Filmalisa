@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movies</title>
+    <title>Catigories</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style/global/global.css">
     <link rel="stylesheet" href="../style/global/reset.css">
-    <link rel="stylesheet" href="../Admin/movies.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../Admin/catigories.css">
 
 
 
 
 </head>
-
-
 
 <!-- Edit Modal -->
 <div class="modal fade" id="editeModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
@@ -84,6 +81,8 @@
 <!-- edit modal end -->
 
 
+
+
 <!-- Delete Confirmation Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -109,80 +108,37 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Create Movie Modal -->
-<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content text-white" style="background-color: #171616; border-radius: 15px;">
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Form -->
-                        <div class="col-md-8">
-                            <form>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control custom-input" placeholder="title">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control custom-input" rows="3"
-                                        placeholder="overview"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control custom-input" placeholder="cover url">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control custom-input"
-                                        placeholder="fragman (youtube embed url)">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control custom-input" placeholder="watch url">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control custom-input" placeholder="imdb">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control custom-input" placeholder="run time minute">
-                                </div>
-                                <div class="mb-3">
-                                    <select class="form-select custom-input">
-                                        <option selected disabled class="option-clas">category</option>
-                                        <option>Action</option>
-                                        <option>Comedy</option>
-                                        <option>Drama</option>
-                                    </select>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="form-check d-flex align-items-center gap-4 ">
-                                        <label class="form-check-label me-2" for="adultCheck">Adult</label>
-                                        <input class="form-check-input" type="checkbox" id="adultCheck" checked>
-                                    </div>
-                                    <button type="submit" class="btn btn-purple">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Poster -->
-                        <div class="col-md-4 d-flex justify-content-center align-items-start foto">
-                            <img src="../assets/image/712a01ff1934ab4d59fb658ae9e9619a2f283725.jpg" alt="poster" class="poster-image">
-                        </div>
-                    </div>
-                </div>
+<div class="modal fade" id="c1-createModal" tabindex="-1" aria-labelledby="c1-createModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content c1-modal-content text-white rounded-4 p-3">
+        <div class="modal-body">
+          <form>
+            <div class="mb-4">
+              <input type="text" class="form-control c1-input" placeholder="category name">
             </div>
+            <button type="submit" class="btn w-100 text-white c1-btn">Submit</button>
+          </form>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+
 <!-- create modal end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -202,11 +158,11 @@
                         <span class="icon"><img src="/assets/icon/dashboard.svg" alt=""></span>
                         Dashboard
                     </a>
-                    <a href="../Admin/movies.html" class="menu-item active">
+                    <a href="../Admin/movies.html" class="menu-item">
                         <span class="icon"><img src="/assets/icon/movies.svg" alt=""></span>
                         Movies
                     </a>
-                    <a href="../Admin/catigories.htm" class="menu-item">
+                    <a href="../Admin/catigories.htm" class="menu-item active">
                         <span class="icon"><img src="/assets/icon/catigories.svg" alt=""></span>
                         Categories
                     </a>
@@ -237,45 +193,35 @@
             <div class="dashboard-header">
                 <div class="header-left">
                     <p class="greeting">Hi Admin</p>
-                    <h1 class="dashboard-title">Movies</h1>
+                    <h1 class="dashboard-title">Categories</h1>
                 </div>
                 <div class="header-right">
-                    <button class="btn create-btn" data-bs-toggle="modal" data-bs-target="#createModal"> Create
-                    </button>
+
+
+                    <button class="btn create-btn" data-bs-toggle="modal" data-bs-target="#c1-createModal">Create</button>
 
                     <img class="admin-avatar"
                         src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                         alt="Admin">
-
                     <span class="admin-name">Admin</span>
                 </div>
             </div>
-
             <main>
                 <div class="table-container">
                     <table class="table custom-table align-middle text-center mb-0">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th class="tr-th2">Title</th>
-                                <th>Overview</th>
-                                <th>Category</th>
-                                <th>IMDB</th>
+                                <th>Name</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>
-                                    <div class="poster-title">
-                                        <img src="../assets/image/poster.svg" alt="poster">
-                                        <span class="fw-semibold">Lost in space</span>
-                                    </div>
-                                </td>
-                                <td>Lorem ipsum test...</td>
-                                <td>Action</td>
-                                <td>7.6</td>
+                                <td>action</td>
+
+                                
                                 <td>
                                     <div class="action-wrapper">
                                         <!-- Pen Icon -->
@@ -296,7 +242,13 @@
                 </div>
 
             </main>
+
+            
+
+          
         </div>
+
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

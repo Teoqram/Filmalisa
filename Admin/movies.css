@@ -200,6 +200,8 @@ nav.menu {
   gap: 10px;
 }
 
+/* admin creadte  */
+
 .create-btn {
   font-family: Raleway, sans-serif;
   color: white;
@@ -265,6 +267,6 @@ form{
 }
 .foto{
     margin-top: 15px;
-    
+
 
 }
