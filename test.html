@@ -2,166 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Infinite Marquee Carousel</title>
+  <title>Comment Input with Avatar</title>
   <style>
     body {
       background-color: #111;
       font-family: Arial, sans-serif;
-      margin: 0;
       padding: 20px;
-      color: #fff;
     }
 
-    .section-title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-    }
-
-    .section-title::after {
-      content: "›";
-      font-size: 28px;
-      margin-left: 10px;
-    }
-
-    .carousel-wrapper {
-      overflow: hidden;
+    .comment-input4 {
       position: relative;
       width: 100%;
-    }
-
-    .carousel-track {
+      max-width: 600px;
       display: flex;
-      width: fit-content;
-      animation: scroll-right 20s linear infinite;
+      align-items: center;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background-color: #1e1e1e;
+      padding-left: 50px; /* yer buraxırıq şəkil üçün */
     }
 
-    .movie-card {
-      position: relative;
-      width: 220px;
-      height: 330px;
-      flex-shrink: 0;
+    .comment-input4 input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: white;
+      padding: 14px 16px;
+      font-size: 14px;
+      outline: none;
     }
 
-    .movie-card img {
+    .comment-avatar4 {
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: red; /* Şəkil yüklənməsə bilinməsi üçün */
+    }
+
+    .comment-avatar4 img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    .movie-info {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px;
+    .send-btn4 {
+      margin-left: 10px;
+      background-color: #a259ff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
     }
 
-    .genre {
-      font-size: 12px;
-      color: #00bfff;
-      margin: 0;
+    .send-btn4:hover {
+      background-color: #c489ff;
     }
 
-    .title {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 4px 0 0 0;
-    }
-
-    @keyframes scroll-right {
-      0% {
-        transform: translateX(-50%);
-      }
-      100% {
-        transform: translateX(0);
-      }
+    .wrapper4 {
+      display: flex;
+      align-items: center;
     }
   </style>
 </head>
 <body>
 
-  <div class="section-title">Action</div>
-
-  <div class="carousel-wrapper">
-    <div class="carousel-track">
-      <!-- 1-ci hissə -->
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Wonder Woman">
-        <div class="movie-info">
-          <p class="genre">Fantasy</p>
-          <p class="title">Wonder Woman 1984</p>
-        </div>
+  <div class="wrapper4">
+    <div class="comment-input4">
+      <div class="comment-avatar4">
+        <img src="your-photo.jpg" alt="avatar">
       </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Justice League">
-        <div class="movie-info">
-          <p class="genre">Fantasy</p>
-          <p class="title">Zack Snyder's Justice League</p>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Mortal Kombat">
-        <div class="movie-info">
-          <p class="genre">Fantasy</p>
-          <p class="title">Mortal Kombat</p>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="The Courier">
-        <div class="movie-info">
-          <p class="genre">Drama</p>
-          <p class="title">The Courier</p>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Thunder Force">
-        <div class="movie-info">
-          <p class="genre">Action</p>
-          <p class="title">Thunder Force</p>
-        </div>
-      </div>
-
-      <!-- 2-ci təkrarlama hissəsi -->
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Wonder Woman">
-        <div class="movie-info">
-          <p class="genre">Fantasy</p>
-          <p class="title">Wonder Woman 1984</p>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Justice League">
-        <div class="movie-info">
-          <p class="genre">Fantasy</p>
-          <p class="title">Zack Snyder's Justice League</p>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Mortal Kombat">
-        <div class="movie-info">
-          <p class="genre">Fantasy</p>
-          <p class="title">Mortal Kombat</p>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="The Courier">
-        <div class="movie-info">
-          <p class="genre">Drama</p>
-          <p class="title">The Courier</p>
-        </div>
-      </div>
-      <div class="movie-card">
-        <img src="./assets/image/actionImages/film.svg" alt="Thunder Force">
-        <div class="movie-info">
-          <p class="genre">Action</p>
-          <p class="title">Thunder Force</p>
-        </div>
-      </div>
+      <input type="text" placeholder="your comment....">
     </div>
+    <button class="send-btn4">▶</button>
   </div>
 
 </body>

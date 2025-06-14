@@ -1,0 +1,450 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  background-color: #1d1d1d;
+}
+header {
+  display: flex;
+  position: relative;
+  height: 100vh; /* və ya daha kiçik bir dəyər */
+  overflow: hidden;
+}
+.sidebar {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.logo {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 80px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  align-items: center;
+}
+
+.carousel-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.descriptionheader {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #beb7fb;
+}
+.descriptionheader2 {
+  font-family: Releway, sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -2%;
+}
+.new-div {
+  max-width: 620px;
+  height: 120px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 0px 0 0px 30px;
+
+  background-color: rgba(18, 13, 13, 0.3); /* şəffaf fon */
+  backdrop-filter: blur(10px); /* blur effekti */
+  -webkit-backdrop-filter: blur(10px); /* Safari üçün */
+}
+
+/* Bootstrap 5 dot indicators */
+
+.new-div-container {
+  display: flex;
+  justify-content: start;
+  margin-top: -85px;
+  margin-left: 100px;
+}
+
+.new-div {
+  color: #ffffff;
+  max-width: 620px;
+  width: 100%;
+  height: 120px;
+  border-radius: 24px;
+  padding: 0px 0 0px 30px;
+  background-color: rgba(#2d4155, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* position apsolute */
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; /* carousel-in üstündə olsun deyə */
+  color: white;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  margin-top: 100px;
+  /* istəsən interaktiv olmasın */
+}
+
+/* istəyə görə mərkəzdə göstərə bilərsən */
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-left: 140px;
+  gap: 20px;
+}
+
+/* HEADER END */
+
+/* MAIN START  */
+
+.section-title {
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #fff;
+  margin: 40px 0 40px 80px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title::after {
+  content: "›";
+  font-size: 36px;
+  margin-left: 10px;
+}
+
+.carousel-wrapper {
+  margin-left: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  width: fit-content;
+  animation: scroll-right 40s linear infinite;
+}
+
+.movie-card {
+  position: relative;
+  width: 128px;
+  height: 162px;
+  flex-shrink: 0;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 10px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 14px !important;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+  font-family: Roboto, sans-serif;
+  color: #ffffff;
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.movie-card2 {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.movie-card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 10px;
+}
+
+.genre2 {
+  color: #00bfcb;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  padding: 4px 8px;
+  margin: 0;
+  border-radius: 0 12px 0 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+
+.title2 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+
+  margin: 4px 0 0 0;
+  font-family: Roboto, sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+}
+.star2 {
+  color: white;
+}
+
+.main-content {
+  margin-bottom: 60px;
+}
+
+/* Main Section  */
+
+.poster img {
+  width: 570px;
+  height: 870px;
+  border-radius: 14px;
+  margin-top: 60px;
+}
+
+.details {
+  max-width: 600px;
+  color: #8e95a9;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.description2 {
+  margin: 1rem 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.title2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: -1.5%;
+}
+.title3 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.wlink {
+  background-color: rgb(7, 7, 7);
+  color: #ffa845;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 8px 8px;
+  border-radius: 8px;
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1 1 200px;
+  font-size: 20px;
+}
+
+.inf {
+  color: #ffffff;
+}
+
+.top-cast {
+  margin-top: 2rem;
+}
+
+
+
+.cast-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.cast-placeholder {
+  width: 100px;
+  height: 130px;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+
+
+/* new Section */
+
+
+   
+
+    .comment-box4 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid #39404f;
+
+
+      border-radius: 10px;
+      padding: 12px 16px;
+      background-color: #1e1e1e;
+      max-width: 580px;
+      margin-left: 25px;
+    }
+
+    
+
+    .avatar4 img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .content4 {
+      flex-grow: 1;
+    }
+
+    .name4 {
+      font-weight: bold;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .time4 {
+      font-size: 12px;
+      color: #fff;
+      float: right;
+    }
+
+    .message4 {
+        font-family: releway, sans-serif;
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #fff;
+
+
+    }
+
+    
+
+
+
+
+    
+
+    .comment-input4 {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding-left: 50px; /* yer buraxırıq şəkil üçün */
+        border: 1px solid #39404f;
+
+      }
+  
+      .comment-input4 input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        color: white;
+        padding: 24px 16px;
+        font-size: 14px;
+        outline: none;
+      }
+  
+      .comment-avatar4 {
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+  
+      .comment-avatar4 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  
+      
+  
+      .wrapper4 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 880px;
+        margin: 100px 0 80px 30px;
+        
+      }
+
+      
