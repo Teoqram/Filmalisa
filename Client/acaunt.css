@@ -1,0 +1,202 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  background-color: #1d1d1d;
+}
+header {
+  display: flex;
+  overflow: hidden;
+  height: 100vh; /* və ya daha kiçik bir dəyər */
+  /* position: relative; */
+}
+.sidebar {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.logo {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 80px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  align-items: center;
+}
+
+.carousel-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.descriptionheader {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #beb7fb;
+}
+.descriptionheader2 {
+  font-family: Releway, sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -2%;
+}
+.new-div {
+  max-width: 620px;
+  height: 120px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 0px 0 0px 30px;
+
+  background-color: rgba(18, 13, 13, 0.3); /* şəffaf fon */
+  backdrop-filter: blur(10px); /* blur effekti */
+  -webkit-backdrop-filter: blur(10px); /* Safari üçün */
+}
+
+/* Bootstrap 5 dot indicators */
+
+.new-div-container {
+  display: flex;
+  justify-content: start;
+  margin-top: -85px;
+  margin-left: 100px;
+}
+
+.new-div {
+  color: #ffffff;
+  max-width: 620px;
+  width: 100%;
+  height: 120px;
+  border-radius: 24px;
+  padding: 0px 0 0px 30px;
+  background-color: rgba(#2d4155, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* position apsolute */
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; /* carousel-in üstündə olsun deyə */
+  color: white;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  margin-top: 100px;
+  /* istəsən interaktiv olmasın */
+}
+
+/* istəyə görə mərkəzdə göstərə bilərsən */
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-left: 140px;
+  gap: 20px;
+}
+
+/* HEADER END */
+
+/* MAIN START  */
+
+.main-content {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+
+
+  
+  .login-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: 100px;
+  }
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-box {
+    background-color: transparent;
+    border: 1px solid #39404f;
+    border-radius: 8px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .input-box input {
+    background: none;
+    border: none;
+    color: #cfcfe2;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .left-icon {
+    color: #999;
+  }
+  
+  .right-icon {
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: #9b51e0;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #8a30d6;
+  }
+  
+  input::placeholder {
+    color: #39404f;
+  }
+  
+  
+  .profil-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 50px;
+    margin-top: 180px;
+  }
+  
+  
+
+
